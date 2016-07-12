@@ -11,7 +11,7 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
   #hero-area .btn{margin-top: 15px;}
-  .navbar-default{background: rgba(0, 0, 0, 0.8);}
+  .navbar-default{background: rgba(255, 255, 255, 1);}
   .social-links{padding-top: 15px;}
   .row {padding: 40px 0px;}
 

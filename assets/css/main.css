@@ -78,7 +78,7 @@ a:hover {
 }
 .navbar-default .navbar-nav > .active,
 .navbar-default .navbar-nav li:hover {
-  background: #e74c3c;
+  background: #2DCB71;
   padding-bottom: 5px;
   color: #fff;
 }
@@ -95,7 +95,8 @@ a:hover {
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background: #333;
+  /*background: #333;*/
+  background: #00A4E4;
 }
 .affix.navbar-default {
   background: rgba(255, 255, 255, 0.8);
