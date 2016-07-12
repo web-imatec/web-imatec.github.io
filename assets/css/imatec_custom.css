@@ -1,3 +1,6 @@
 .imatec_intro {
 	font-size: 25px;
 }
+.navbar-default .navbar-toggle {
+    border-color: #2F2F2F;
+}
