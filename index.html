@@ -27,29 +27,27 @@
         <script src="assets/js/jquery-min.js"></script>
         <script type="text/javascript" src="assets/js/jssor.slider.mini.js"></script>
         <script>
-        jQuery(document).ready(function ($) {
-            
-            var jssor_1_options = {
+        $(document).ready(function ($) {
+            var s1Options = {
               $AutoPlay: true,
-              $Loop: 2,
               $Idle: 0,
               $AutoPlaySteps: 4,
-              $SlideDuration: 1600,
+              $SlideDuration: 3000,
               $SlideEasing: $Jease$.$Linear,
               $PauseOnHover: 4,
-              $SlideWidth: 140,
+              $SlideWidth: 100,
               $Cols: 4
             };
             
-            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            var s1Slider = new $JssorSlider$("jssor_1", s1Options);
             
             //responsive code begin
             //you can remove responsive code if you don't want the slider scales while window resizing
             function ScaleSlider() {
-                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                var refSize = s1Slider.$Elmt.parentNode.clientWidth;
                 if (refSize) {
                     refSize = Math.min(refSize, 809);
-                    jssor_1_slider.$ScaleWidth(refSize);
+                    s1Slider.$ScaleWidth(refSize);
                 }
                 else {
                     window.setTimeout(ScaleSlider, 30);
@@ -256,27 +254,31 @@
 
     <h1 class="title">Clientes</h1>
     <!--<h2 class="subtitle">Lorem Ipsum is simply dummy text</h2>-->
-    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 980px; height: 100px; overflow: hidden; visibility: hidden;">
+    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 500px; height: 100px; overflow: hidden; visibility: hidden;">
         <!-- Loading Screen -->
         <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
             <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
         </div>
-        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 980px; height: 100px; overflow: hidden;">
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 500px; height: 100px; overflow: hidden;">
             <div style="display: none;">
-            	<img data-u="image" src="assets/img/clients/ind-logo.jpg" alt="IND">
+                <img data-u="image" src="assets/img/clients/achs-logo_400_e.png" alt="ACHS">
             </div>
             <div style="display: none;">
-            	<img data-u="image" src="assets/img/clients/conicyt-logo.png" alt="CONICYT">
+            	<img data-u="image" src="assets/img/clients/conicyt-logo_400_e.png" alt="CONICYT">
             </div>
             <div style="display: none;">
-                <img data-u="image" src="assets/img/clients/tottus-logo.png" alt="Tottus">
+                <img data-u="image" src="assets/img/clients/ind-logo_400_e.png" alt="IND">
             </div>
             <div style="display: none;">
-            	<img data-u="image" src="assets/img/clients/achs-logo.png" alt="ACHS">
+                <img data-u="image" src="assets/img/clients/rpro-logo_400_e.png" alt="Retail Pro">
             </div>
-            <a data-u="add" href="http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
-        
+            <div style="display: none;">
+                <img data-u="image" src="assets/img/clients/rubrika-logo_400_e.png" alt="Rubrika">
+            </div>
+            <div style="display: none;">
+                <img data-u="image" src="assets/img/clients/tottus-logo_400_e.png" alt="Tottus">
+            </div>
         </div>
     </div>
 
