@@ -26,6 +26,41 @@
         <!-- jQuery Load -->
         <script src="assets/js/jquery-min.js"></script>
         <script type="text/javascript" src="assets/js/jssor.slider.mini.js"></script>
+        <script>
+        jQuery(document).ready(function ($) {
+            
+            var jssor_1_options = {
+              $AutoPlay: true,
+              $Idle: 0,
+              $AutoPlaySteps: 4,
+              $SlideDuration: 1600,
+              $SlideEasing: $Jease$.$Linear,
+              $PauseOnHover: 4,
+              $SlideWidth: 140,
+              $Cols: 7
+            };
+            
+            var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+            
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizing
+            function ScaleSlider() {
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+                if (refSize) {
+                    refSize = Math.min(refSize, 809);
+                    jssor_1_slider.$ScaleWidth(refSize);
+                }
+                else {
+                    window.setTimeout(ScaleSlider, 30);
+                }
+            }
+            ScaleSlider();
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
+    </script>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         
         <!--[if lt IE 9]>
@@ -220,17 +255,30 @@
 
     <h1 class="title">Clientes</h1>
     <!--<h2 class="subtitle">Lorem Ipsum is simply dummy text</h2>-->
-
-    <div class="wow fadeInDown">
-    <img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/ind-logo.jpg" alt="IND">
-
-    <img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/conicyt-logo.png" alt="CONICYT">
-
-    <img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/tottus-logo.png" alt="Tottus">
-
-    <img class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/achs-logo.png" alt="ACHS">
-
+    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 980px; height: 100px; overflow: hidden; visibility: hidden;">
+        <!-- Loading Screen -->
+        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+            <div style="position:absolute;display:block;background:url('img/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+        </div>
+        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 980px; height: 100px; overflow: hidden;">
+            <div style="display: none;">
+            	<img data-u="image" class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/ind-logo.jpg" alt="IND">
+            </div>
+            <div style="display: none;">
+            	<img data-u="image" class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/conicyt-logo.png" alt="CONICYT">
+            </div>
+            <div style="display: none;">
+                <img data-u="image" class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/tottus-logo.png" alt="Tottus">
+            </div>
+            <div style="display: none;">
+            	<img data-u="image" class="col-md-3 col-md-3 col-sm-3 col-xs-12" src="assets/img/clients/achs-logo.png" alt="ACHS">
+            </div>
+            <a data-u="add" href="http://www.jssor.com" style="display:none">Bootstrap Carousel</a>
+        
+        </div>
     </div>
+
     </div>
     </div>
     </section>
