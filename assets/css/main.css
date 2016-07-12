@@ -100,6 +100,7 @@ a:hover {
 }
 .affix.navbar-default {
   background: rgba(255, 255, 255, 0.8);
+  border-bottom: solid 1px gray;
 }
 #hero-area {
   background: #005994;
