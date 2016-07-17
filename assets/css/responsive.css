@@ -1,6 +1,6 @@
 @media (min-width: 768px) and (max-width: 1024px) {
 
-#hero-area .btn{margin-top: 15px;}
+#welcome .btn{margin-top: 15px;}
 
   .nav > li > a {
     padding: 12px 8px;
@@ -11,7 +11,7 @@
 
 /*  .navbar-default{background: rgba(255, 255, 255, 1);}*/
 @media (min-width: 320px) and (max-width: 480px) {
-  #hero-area .btn{margin-top: 15px;}
+  #welcome .btn{margin-top: 15px;}
   .social-links{padding-top: 15px;}
   .row {padding: 40px 0px;}
 
