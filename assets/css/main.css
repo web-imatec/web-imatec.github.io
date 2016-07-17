@@ -60,8 +60,9 @@ a:hover {
 }
 .navbar-default {
   border: none;
+  border-bottom: 1px solid #adadad;
   border-radius: 0;
-  background: rgba(255, 255, 255, 1);
+  background: rgba(230, 230, 230, 0.9);
 }
 .imatec-logo-main > img{
   width: 150px;
@@ -74,12 +75,12 @@ a:hover {
 }
 .navbar-default .navbar-nav li a,
 .navbar-default .navbar-nav li a:hover {
-  color: #0058B0;
+  color: #00172e;
 }
 .navbar-default .navbar-nav > .active,
 .navbar-default .navbar-nav li:hover {
-  background: #2DCB71;
-  padding-bottom: 5px;
+  background: rgb(66, 194, 232);
+  padding-bottom: 0px;
   color: #fff;
 }
 .navbar-default .navbar-brand {
@@ -99,7 +100,7 @@ a:hover {
   background: #00A4E4;
 }
 .affix.navbar-default {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(230, 230, 230, 0.9);
   border-bottom: solid 1px gray;
 }
 #hero-area {
