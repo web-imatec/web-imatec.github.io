@@ -2,6 +2,13 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var minify = require('gulp-minify-css');
+const imagemin = require('gulp-imagemin');
+
+gulp.task('minimg_imatec', function(){
+    gulp.src(['assets/img/imatec/nosotros_imatec.jpg'])
+        .pipe(imagemin())
+        .pipe(gulp.dest('build/img/imatec/'))
+});
 
 gulp.task('minjs', function(){
    gulp.src('src/scripts/*.js')
@@ -17,5 +24,5 @@ gulp.task('mincss', function(){
    .pipe(gulp.dest('build/css/'));
 });
 
-gulp.task('default',['mincss'],function(){
+gulp.task('default',['mincss', 'minimg_imatec'],function(){
 });
