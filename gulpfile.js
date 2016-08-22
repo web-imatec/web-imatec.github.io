@@ -11,7 +11,7 @@ gulp.task('minjs', function(){
 });
 
 gulp.task('mincss', function(){
-   gulp.src(['assets/css/main.css', 'assets/css/main.css', 'assets/extras/animate.css', 'assets/extras/lightbox.css', 'assets/css/imatec_custom.css'])
+   gulp.src(['assets/css/bootstrap.min.css', 'assets/css/main.css', 'assets/css/main.css', 'assets/extras/animate.css', 'assets/extras/lightbox.css', 'assets/css/imatec_custom.css'])
    .pipe(concat('min.css'))
    .pipe(minify())
    .pipe(gulp.dest('build/css/'));
